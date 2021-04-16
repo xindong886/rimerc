@@ -1,6 +1,6 @@
-## Rimerc: rimer config
+### rimerc: rimer's dictionary & config
 
-#### 让更多的人快速高效地享受 Rime 输入法带来的乐趣 🎉🎉🎉
+**让更多的人快速高效地享受 Rime 输入法带来的乐趣 🎉🎉🎉**
 
 #### 由来
 
@@ -36,25 +36,33 @@ Rimerc 是为了解决 Rime 新手配置难题，提供自己整理和不断磨�
 - 均经过自己整理和磨合
 - 适合不熟悉配置的新手
 
-#### 如何使用
+#### 用法
 
 由于词库文件巨大且均为文本数据，极易压缩，压缩以减少下载时间
 
 **📢 解压密码统一为: rimerc**
 
 请使用 [7-Zip](https://www.7-zip.org/) 抑或使用命令行进行解压
+
+##### 脚本方式
+
+推荐使用脚本方式，具有自动解压、备份和重新部署功能，更加高效快捷
+
  ``` bash
+ # usage of rimerc
  git clone https://github.com/Bambooin/rimerc.git
  cd rimerc
- 7z x trime.7z
+ # pick one of your rime: fcitx, fcitx5, ibus or squirrel
+ ./rimerc.sh fcitx5
  ```
 
-总体步骤
+##### 手动方式
+
 1. **备份自己原有配置文件**
 2. 解压新配置至相应目录
 3. 重新部署即可流畅使用
 
-##### 默认配置路径
+##### 配置路径
 
 - Android
   - [Trime](https://github.com/osfans/trime): /storage/emulated/0/rime
@@ -63,19 +71,20 @@ Rimerc 是为了解决 Rime 新手配置难题，提供自己整理和不断磨�
   - [Squirrel](https://github.com/rime/squirrel): ~/Library/Rime
 
 - UN*X
-  - [Fcitx](https://github.com/fcitx/fcitx-rime): ~/.config/fcitx/rime (推荐)
+  - [Fcitx](https://github.com/fcitx/fcitx-rime): ~/.config/fcitx/rime
+  - [Fcitx5](https://github.com/fcitx/fcitx5-rime): ~/.local/share/fcitx5/rime
   - [IBus](https://github.com/rime/ibus-rime): ~/.config/ibus/rime
 
 - Windows
   - [Weasel](https://github.com/rime/weasel): %AppData%\Rime
 
-##### 具体步骤
+##### 详细步骤
 
 以 Android 平台为例 (Android 内存需大于 2G，部署前清除系统缓存)
 
 1. 为了保留自己的配置文件，需要把 rime 重命名为 unrime
 2. 新建一个空目录 rime，复制 tirme.7z 里面的文件到该目录
-3. 进入应用，输入-->重置-->勾选所有选项
+3. 进入应用，输入-->恢复默认设置-->勾选所有选项
 4. 重新部署(**由于词库文件很大，部署运行时间较长，请耐心等待**)
 5. 部署完成后 build 目录里面生成各种 bin 文件即可认为部署成功
 6. 进入系统设置启用并选择 Trime 输入法，即可享受 Rime 输入法
@@ -89,5 +98,4 @@ Rimerc 是为了解决 Rime 新手配置难题，提供自己整理和不断磨�
 - Squirrel: 主要参考 [scomper](https://github.com/scomper) 的[配置](https://github.com/scomper/Rime)文件 
 - Rimer: **感谢所有使用、分享和推广 Rime 输入法的 Rimer**
 
-#### 如果配置有所帮助，欢迎推荐给更多 Rime 爱好者和用户使用 🥳🥳🥳
-
+**如果配置有所帮助，欢迎推荐给更多 Rime 爱好者和用户使用 🥳🥳🥳**
